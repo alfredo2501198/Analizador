@@ -4,13 +4,20 @@ from analyzer.text_analizer import (
     count_words,
     count_sentences,
     count_characters,
-    longest_word
+    count_paragraphs,
+    longest_word,
+    longest_sentences,
+    longest_paragraphs
 )
 
-text = "Hola mundo, esta es un frase de prueba escrita directamente en el código de programacion"
+text = "Hola mundo. Esta es un frase de prueba escrita directamente en el código de programacion"
 
 print(f"Palabras: ", count_words(text))
 print(f"Caracteres: ", count_characters(text))
 print(f"Oraciones: ", count_sentences(text))
 print(f"Palabra más larga: ", longest_word(text))
+print(f"Parrafos: ", count_paragraphs(text))
+print(f"Parrafo más largo: ", longest_paragraphs(text))
+print(f"Oración más larga: ", longest_sentences(text))
+
 
