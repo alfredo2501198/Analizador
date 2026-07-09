@@ -13,7 +13,7 @@ def count_sentences(text):
     return len(sentences)
 
 def count_paragraphs(text):
-    paragraphs = text.split("/n/n")
+    paragraphs = text.split("\n\n")
     paragraphs = [p for p in paragraphs if p.strip]
     return len(paragraphs)
 

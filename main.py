@@ -10,7 +10,12 @@ from analyzer.text_analizer import (
     longest_paragraphs
 )
 
-text = "Hola mundo. Esta es un frase de prueba escrita directamente en el código de programacion"
+text = """
+        Hola mundo. Esta es un frase de prueba escrita directamente en el código de programacion.
+
+        Esta es una prueba de nuestro analizador.        
+
+        Podemos seguir agregando palabras para probar a nuestro analizador. """
 
 print(f"Palabras: ", count_words(text))
 print(f"Caracteres: ", count_characters(text))
