@@ -17,7 +17,7 @@ jobs:
             - name: Setup Python
               uses: actions/setup-python@v4 # Esta es la versión de python con la que va a trabajar 
               with:
-                python-version: "3.9.7" # Aquí especificamos la versión con la que desarrollo el proyecto.
+                python-version: "3.9" # Aquí especificamos la versión con la que desarrollo el proyecto.
             - name: Install dependencies
               run: pip install -r requirements.txt # Comando que intalla las librerias necesarias para ejecutar nuestro código.
             - name: Check linting # Linting es un proceso de análisis
