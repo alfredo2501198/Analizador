@@ -26,3 +26,6 @@ print(f"Parrafo más largo: ", longest_paragraphs(text))
 print(f"Oración más larga: ", longest_sentences(text))
 
 
+# tiene algunos puntos a mejorar, ya que la palabra más larga cuenta los carácteres y es "programación."
+# el punto esta sumando un caracter a la palabra por lo tanto se vuelve la más larga, lo cual puede generar errores.
+# los testeo funcionan bien, tal cual lo generamos. 

@@ -24,6 +24,7 @@ def test_count_sentences():
     text = "Hola mundo. Esto es una prueba"
     assert count_sentences(text) == 2
 
+
 def test_longest_word():
     text = "Hola mundo de programación"
     assert longest_word(text) == "programación"

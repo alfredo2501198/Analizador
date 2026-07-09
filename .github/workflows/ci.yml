@@ -1,0 +1,31 @@
+
+name: Run Test # cualquier nombre, se recomienda que haga referencia a lo que hara
+
+on: [push, pull_request] # En que momento se ejecuta.
+
+permissions: #nos indica que nos permite hacer 
+    contents: read
+    packages: write
+
+jobs: 
+    test:
+        runs-on: ubuntu-latest # es el lugar en el que se ejecutara o correra este chequeo.
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3 # esta es la versión de gitaction que ocuparemos.
+            - name: Setup Python
+              uses: actions/setup-python@v4 # Esta es la versión de python con la que va a trabajar 
+              with:
+                python-version: "3.9.7" # Aquí especificamos la versión con la que desarrollo el proyecto.
+            - name: Install dependencies
+              run: pip install -r requirements.txt # Comando que intalla las librerias necesarias para ejecutar nuestro código.
+            - name: Check linting # Linting es un proceso de análisis
+              run: ruff check . # existen librerias como "Flake8", "pylint" pero aqui ocuparemos "ruff" ya que es rápida y sencilla. Revisa en etapa local.
+            - name: Run test
+              run: pytest # Es un framework que sirve para verificar el funcionamiento.
+            
+
+
+
+
