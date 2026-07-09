@@ -24,6 +24,19 @@ jobs:
               run: ruff check . # existen librerias como "Flake8", "pylint" pero aqui ocuparemos "ruff" ya que es rápida y sencilla. Revisa en etapa local.
             - name: Run test
               run: pytest # Es un framework que sirve para verificar el funcionamiento.
+            - name: Login ti github container registry
+              uses: docker/login-action@v4
+              with:
+                registry: ghrc.io
+                username: ${{github.actor}}
+                password: ${{secrets.GITHUB_TOKEN}}
+            - name: build and push
+              uses: docker/build-and-push-action@v6
+              with:
+                push: true
+                tags: ghrc.io/${{github.actor}}/Analizador:latest
+                
+
             
 
 
