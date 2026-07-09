@@ -17,13 +17,13 @@ text = """
 
         Podemos seguir agregando palabras para probar a nuestro analizador. """
 
-print(f"Palabras: ", count_words(text))
-print(f"Caracteres: ", count_characters(text))
-print(f"Oraciones: ", count_sentences(text))
-print(f"Palabra más larga: ", longest_word(text))
-print(f"Parrafos: ", count_paragraphs(text))
-print(f"Parrafo más largo: ", longest_paragraphs(text))
-print(f"Oración más larga: ", longest_sentences(text))
+print("Palabras: ", count_words(text))
+print("Caracteres: ", count_characters(text))
+print("Oraciones: ", count_sentences(text))
+print("Palabra más larga: ", longest_word(text))
+print("Parrafos: ", count_paragraphs(text))
+print("Parrafo más largo: ", longest_paragraphs(text))
+print("Oración más larga: ", longest_sentences(text))
 
 
 # tiene algunos puntos a mejorar, ya que la palabra más larga cuenta los carácteres y es "programación."
